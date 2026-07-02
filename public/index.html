@@ -1,0 +1,72 @@
+<!doctype html>
+<html lang="bn">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>KhojAI</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Anek+Bangla:wght@400;500;600;700&family=Fraunces:opsz,wght@9..144,700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="/styles.css" />
+  </head>
+  <body>
+    <main class="shell">
+      <section class="masthead" aria-labelledby="page-title">
+        <div class="brand-row">
+          <span class="mark" aria-hidden="true"></span>
+          <span>KhojAI</span>
+        </div>
+        <div class="hero-grid">
+          <div>
+            <p class="kicker">বাংলা এআই সার্চ</p>
+            <h1 id="page-title">প্রশ্ন করুন, সাজানো উত্তর পান।</h1>
+          </div>
+          <p class="intro">
+            আপনার বিষয় লিখুন। KhojAI দ্রুত সারাংশ, গুরুত্বপূর্ণ পয়েন্ট, পরবর্তী প্রশ্ন এবং যাচাইয়ের দিকনির্দেশনা তৈরি করে।
+          </p>
+        </div>
+      </section>
+
+      <section class="search-panel" aria-label="Search">
+        <form id="search-form" class="search-form">
+          <label class="sr-only" for="query">আপনার প্রশ্ন</label>
+          <textarea
+            id="query"
+            name="query"
+            rows="3"
+            maxlength="700"
+            placeholder="যেমন: বাংলাদেশের সৌরবিদ্যুৎ বাজার এখন কেমন?"
+            required
+          ></textarea>
+          <div class="controls">
+            <div class="chips" aria-label="Example searches">
+              <button type="button" class="chip">স্টার্টআপ আইডিয়া</button>
+              <button type="button" class="chip">ভ্রমণ পরিকল্পনা</button>
+              <button type="button" class="chip">স্বাস্থ্যকর খাবার</button>
+            </div>
+            <button class="submit" type="submit">
+              <span>সার্চ</span>
+              <svg aria-hidden="true" viewBox="0 0 24 24">
+                <path d="m5 12h13m-5-5 5 5-5 5" />
+              </svg>
+            </button>
+          </div>
+        </form>
+      </section>
+
+      <section id="status" class="status" hidden></section>
+
+      <section id="results" class="results empty" aria-live="polite">
+        <div class="empty-state">
+          <span class="empty-line"></span>
+          <h2>আপনার প্রথম সার্চের অপেক্ষায়</h2>
+          <p>প্রশ্ন যত নির্দিষ্ট হবে, উত্তর তত বেশি কাজে লাগবে।</p>
+        </div>
+      </section>
+    </main>
+    <script src="/app.js" type="module"></script>
+  </body>
+</html>
